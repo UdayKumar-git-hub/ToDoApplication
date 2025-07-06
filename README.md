@@ -31,3 +31,29 @@ A simple and efficient **ToDo Application** built using **Spring Boot**, designe
 
 ---
 
+2️⃣ Configure Database
+Update src/main/resources/application.properties:
+
+For MySQL:
+properties
+Copy
+Edit
+
+spring.datasource.url=jdbc:mysql://localhost:3306/todo_db
+spring.datasource.username=root
+spring.datasource.password=yourpassword
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+For H2 (Dev Mode):
+properties
+Copy
+Edit
+
+spring.datasource.url=jdbc:h2:mem:testdb
+spring.datasource.driverClassName=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.h2.console.enabled=true
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+spring.jpa.hibernate.ddl-auto=update
